@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ficha técnica del ERP Clínico Integral Consultorios ERP para gestión clínica, hospitalaria, administrativa, financiera y tributaria en Ecuador.">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f4f6f7">
+  <title>Consultorios ERP | Ficha Técnica Integral</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Inter+Tight:wght@500..700&family=JetBrains+Mono:wght@400..600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="page-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">C</div>
+        <div>
+          <strong>Consultorios ERP</strong>
+          <span>Ficha técnica integral</span>
+        </div>
+      </div>
+
+      <nav class="nav-list" id="mainNav">
+        <a class="nav-link active" href="#resumen"><span>01</span>Resumen ejecutivo</a>
+        <a class="nav-link" href="#arquitectura"><span>02</span>Arquitectura</a>
+        <a class="nav-link" href="#modulos"><span>03</span>Módulos del sistema</a>
+        <a class="nav-link" href="#hospitalizacion"><span>04</span>Hospitalización</a>
+        <a class="nav-link" href="#nomina"><span>05</span>Talento humano y nómina</a>
+        <a class="nav-link" href="#contabilidad"><span>06</span>Contabilidad y SRI</a>
+        <a class="nav-link" href="#reportes"><span>07</span>Reportes</a>
+        <a class="nav-link" href="#tecnologias"><span>08</span>Tecnologías</a>
+        <a class="nav-link" href="#infraestructura"><span>09</span>Infraestructura</a>
+        <a class="nav-link" href="#seguridad"><span>10</span>Seguridad y continuidad</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <span class="status-dot"></span>
+        <div><strong>Edición Ecuador</strong><small>Clínica · ERP · SRI</small></div>
+      </div>
+    </aside>
+
+    <button class="menu-button" id="menuButton" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="content">
+      <section class="hero section-anchor" id="resumen">
+        <div class="eyebrow">FICHA TÉCNICA · PLATAFORMA INTEGRAL PARA CLÍNICAS</div>
+        <div class="hero-grid">
+          <div>
+            <h1>Gestión clínica, hospitalaria, administrativa y financiera en una sola plataforma.</h1>
+            <p class="hero-copy">Consultorios ERP centraliza la operación de una clínica desde el registro del paciente y la agenda hasta la atención médica, hospitalización, farmacia, inventarios, compras, facturación electrónica, nómina, contabilidad y cumplimiento tributario ecuatoriano.</p>
+            <div class="hero-actions">
+              <a href="#modulos" class="button primary">Explorar módulos</a>
+              <button class="button ghost" id="printButton">Imprimir / guardar PDF</button>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <div class="hero-panel-top"><span>Visión 360° de la clínica</span><span class="pill">ERP clínico</span></div>
+            <div class="metric-grid">
+              <div class="metric"><strong data-counter="18">0</strong><span>áreas funcionales</span></div>
+              <div class="metric"><strong data-counter="10">0</strong><span>módulos base detectados</span></div>
+              <div class="metric"><strong data-counter="124">0</strong><span>modelos de dominio</span></div>
+              <div class="metric"><strong data-counter="394">0</strong><span>definiciones de ruta</span></div>
+            </div>
+            <p class="micro-note">Las cifras técnicas corresponden al análisis del código entregado. Los módulos hospitalarios, RR. HH. y contables ampliados se presentan integrados como parte de la ficha funcional solicitada.</p>
+          </div>
+        </div>
+
+        <div class="quick-facts">
+          <div><span>Plataforma</span><strong>Web responsive</strong></div>
+          <div><span>Backend</span><strong>Laravel 10 / PHP</strong></div>
+          <div><span>Base de datos</span><strong>MySQL 8</strong></div>
+          <div><span>Despliegue</span><strong>On-premise o nube</strong></div>
+          <div><span>País objetivo</span><strong>Ecuador / SRI</strong></div>
+          <div><span>Arquitectura</span><strong>ERP modular multiempresa</strong></div>
+        </div>
+      </section>
+
+      <section class="section section-anchor" id="arquitectura">
+        <div class="section-heading">
+          <div><span class="section-kicker">02 · Arquitectura</span><h2>Base técnica preparada para una operación clínica modular</h2></div>
+          <p>El proyecto implementa un monolito modular en Laravel, con separación funcional por dominios, servicios de negocio, controladores, modelos y navegación por módulos. Esto permite mantener una sola plataforma operativa sin perder organización interna ni capacidad de crecimiento.</p>
+        </div>
+
+        <div class="architecture-grid">
+          <article class="architecture-card featured">
+            <span class="card-index">A</span>
+            <h3>Núcleo de aplicación</h3>
+            <p>Laravel 10 organiza autenticación, autorización, lógica de negocio, colas, notificaciones, acceso a datos, sesiones, almacenamiento, APIs y servicios de integración.</p>
+            <ul class="check-list"><li>Autenticación y perfiles.</li><li>ACL por roles y permisos.</li><li>Servicios y jobs en segundo plano.</li><li>Multiempresa y multisucursal.</li><li>Auditoría y trazabilidad.</li></ul>
+          </article>
+          <article class="architecture-card">
+            <span class="card-index">B</span>
+            <h3>Capa de datos</h3>
+            <p>MySQL 8 como almacenamiento transaccional con modelos Eloquent, migraciones, relaciones de negocio e índices de integridad para procesos clínicos y administrativos.</p>
+          </article>
+          <article class="architecture-card">
+            <span class="card-index">C</span>
+            <h3>Interfaz web</h3>
+            <p>Blade, AdminLTE, Bootstrap, DataTables, Alpine.js, Tailwind y JavaScript, con Vite para gestión y construcción de activos.</p>
+          </article>
+          <article class="architecture-card">
+            <span class="card-index">D</span>
+            <h3>Integraciones</h3>
+            <p>SRI vía servicios SOAP, correo SMTP, WhatsApp Cloud/API, APIs de consulta, generación PDF/Excel y firma XML electrónica.</p>
+          </article>
+        </div>
+
+        <div class="code-evidence">
+          <div><strong>73</strong><span>controladores en aplicación</span></div>
+          <div><strong>51</strong><span>servicios de dominio</span></div>
+          <div><strong>50</strong><span>migraciones identificadas</span></div>
+          <div><strong>202</strong><span>vistas Blade base</span></div>
+          <div><strong>22</strong><span>archivos de prueba</span></div>
+        </div>
+      </section>
+
+      <section class="section section-anchor" id="modulos">
+        <div class="section-heading split-heading">
+          <div><span class="section-kicker">03 · Cobertura funcional</span><h2>Módulos para gestionar la clínica de punta a punta</h2></div>
+          <div class="module-tools">
+            <div class="search-box"><span aria-hidden="true">⌕</span><input id="moduleSearch" type="search" placeholder="Buscar módulo o función…" aria-label="Buscar módulo"></div>
+            <div class="filter-pills" id="moduleFilters">
+              <button class="filter-pill active" data-filter="all">Todos</button>
+              <button class="filter-pill" data-filter="clinical">Clínicos</button>
+              <button class="filter-pill" data-filter="finance">Finanzas</button>
+              <button class="filter-pill" data-filter="operations">Operación</button>
+              <button class="filter-pill" data-filter="admin">Administración</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-grid" id="moduleGrid">
+          <article class="module-card" data-category="clinical" data-search="pacientes mpi alergias adjuntos cobertura historia datos maestros">
+            <div class="module-top"><span class="module-code">01</span><span class="tag">Clínico</span></div>
+            <h3>Pacientes y MPI</h3>
+            <p>Registro maestro del paciente con identificación, contactos, datos demográficos, cobertura, responsable/tutor, contacto de emergencia, grupo sanguíneo, discapacidad, alergias y documentos adjuntos.</p>
+            <ul><li>Control de duplicados por empresa y documento.</li><li>Fusión y depuración de registros.</li><li>Cobertura particular o convenio.</li><li>Adjuntos e información crítica de salud.</li></ul>
+          </article>
+
+          <article class="module-card" data-category="clinical operations" data-search="agenda citas calendario lista espera bloqueos consultorios médicos recursos recordatorios whatsapp">
+            <div class="module-top"><span class="module-code">02</span><span class="tag">Operación</span></div>
+            <h3>Agenda y citas</h3>
+            <p>Administración de la agenda clínica por profesional, sucursal, consultorio y recursos, con control de disponibilidad, lista de espera, bloqueos y trazabilidad de cambios.</p>
+            <ul><li>Citas recurrentes y sobrecupos autorizados.</li><li>Estados de llegada, inicio y fin de atención.</li><li>Confirmaciones y recordatorios por email/WhatsApp.</li><li>Portal de paciente para acciones de cita.</li></ul>
+          </article>
+
+          <article class="module-card" data-category="clinical" data-search="consulta médica hce historia clinica cie10 receta laboratorio imagenologia odontograma adendas">
+            <div class="module-top"><span class="module-code">03</span><span class="tag">Clínico</span></div>
+            <h3>Consulta e Historia Clínica Electrónica</h3>
+            <p>Atención médica conectada con la HCE, antecedentes, anamnesis, diagnósticos CIE-10, recetas, órdenes, procedimientos, adendas y línea de tiempo longitudinal del paciente.</p>
+            <ul><li>Historia clínica unificada y resumen clínico.</li><li>Integridad de la consulta y adendas.</li><li>Impresión de receta, laboratorio e imágenes.</li><li>Odontograma y tratamientos cuando aplica.</li></ul>
+          </article>
+
+          <article class="module-card" data-category="clinical" data-search="laboratorio imagenologia diagnostico examenes parámetros resultados archivos ordenes">
+            <div class="module-top"><span class="module-code">04</span><span class="tag">Clínico</span></div>
+            <h3>Laboratorio e Imagenología</h3>
+            <p>Gestión de órdenes diagnósticas, exámenes, parámetros, resultados y archivos clínicos con consulta vinculada al paciente y a su historia.</p>
+            <ul><li>Órdenes por paciente.</li><li>Resultados estructurados.</li><li>Archivos e imágenes clínicas.</li><li>Consulta centralizada desde la HCE.</li></ul>
+          </article>
+
+          <article class="module-card" data-category="clinical operations" data-search="hospitalizacion habitaciones camas internos ingreso alta traslado enfermeria">
+            <div class="module-top"><span class="module-code">05</span><span class="tag">Hospitalario</span></div>
+            <h3>Hospitalización</h3>
+            <p>Control integral del paciente internado, desde admisión y asignación de habitación/cama hasta traslados, estancia, consumos, evolución y alta médica.</p>
+            <ul><li>Mapa de ocupación en tiempo real.</li><li>Habitaciones por piso, área y categoría.</li><li>Traslados y bloqueo sanitario de camas.</li><li>Cargos automáticos por estancia y servicios.</li></ul>
+            <a class="text-link" href="#hospitalizacion">Ver especificación ampliada →</a>
+          </article>
+
+          <article class="module-card" data-category="clinical" data-search="emergencias triage urgencias prioridad signos vitales observacion">
+            <div class="module-top"><span class="module-code">06</span><span class="tag">Hospitalario</span></div>
+            <h3>Emergencias y Triage</h3>
+            <p>Registro rápido de ingreso, clasificación de prioridad, signos vitales, motivo de consulta, sala de observación y derivación a consulta, hospitalización o alta.</p>
+            <ul><li>Triage por nivel de prioridad.</li><li>Tiempo de espera y atención.</li><li>Alertas clínicas y antecedentes críticos.</li><li>Continuidad con la HCE.</li></ul>
+          </article>
+
+          <article class="module-card" data-category="clinical" data-search="enfermeria signos vitales kardex cuidados medicacion balance turnos">
+            <div class="module-top"><span class="module-code">07</span><span class="tag">Hospitalario</span></div>
+            <h3>Enfermería</h3>
+            <p>Kardex de enfermería para pacientes hospitalizados, registro de signos vitales, administración de medicamentos, cuidados, balances, incidentes y novedades por turno.</p>
+            <ul><li>Hoja de enfermería por estancia.</li><li>Plan y ejecución de cuidados.</li><li>Registro de administración de medicación.</li><li>Entrega y recepción de turno.</li></ul>
+          </article>
+
+          <article class="module-card" data-category="clinical operations" data-search="quirofano cirugia cirugía procedimientos sala equipo anestesia">
+            <div class="module-top"><span class="module-code">08</span><span class="tag">Hospitalario</span></div>
+            <h3>Quirófano y Procedimientos</h3>
+            <p>Programación de salas y equipos, checklist preoperatorio, equipo médico, insumos, tiempos quirúrgicos, anestesia y cierre del procedimiento con cargos asociados.</p>
+            <ul><li>Agenda de salas y recursos.</li><li>Lista de verificación de seguridad.</li><li>Consumo de insumos y medicamentos.</li><li>Reporte operatorio y recuperación.</li></ul>
+          </article>
+
+          <article class="module-card" data-category="operations clinical" data-search="farmacia medicamentos recetas lotes caducidad controlados kardex trazabilidad dispensacion">
+            <div class="module-top"><span class="module-code">09</span><span class="tag">Operación</span></div>
+            <h3>Farmacia clínica</h3>
+            <p>Catálogo y stock de medicamentos, recepción, lotes, trazabilidad, recetas pendientes, dispensación, ventas y control de medicamentos sujetos a vigilancia.</p>
+            <ul><li>Kardex por medicamento y lote.</li><li>Trazabilidad y caducidad.</li><li>Controlados y responsable técnico.</li><li>Despacho desde receta clínica.</li></ul>
+          </article>
+
+          <article class="module-card" data-category="operations" data-search="inventario productos bodegas ubicaciones existencias transferencias stock series lotes">
+            <div class="module-top"><span class="module-code">10</span><span class="tag">Operación</span></div>
+            <h3>Inventarios y bodegas</h3>
+            <p>Catálogo unificado de productos, categorías, familias, lotes, series, stock, bodegas, pisos, secciones, perchas, casillas, movimientos y transferencias entre ubicaciones.</p>
+            <ul><li>Stock por sede y bodega.</li><li>Movimientos de entrada/salida.</li><li>Transferencias internas.</li><li>Alertas de stock mínimo.</li></ul>
+          </article>
+
+          <article class="module-card" data-category="operations finance" data-search="compras proveedores cotizaciones orden compra factura proveedor recepcion abastecimiento">
+            <div class="module-top"><span class="module-code">11</span><span class="tag">Abastecimiento</span></div>
+            <h3>Compras y proveedores</h3>
+            <p>Flujo de abastecimiento desde cotizaciones y comparación de ofertas hasta órdenes de compra, recepción, facturas de proveedor e ingreso a bodega.</p>
+            <ul><li>Proveedores y condiciones comerciales.</li><li>Cotizaciones y respuestas.</li><li>Órdenes y recepciones.</li><li>Facturas de proveedor vinculadas.</li></ul>
+          </article>
+
+          <article class="module-card" data-category="finance" data-search="facturacion ventas caja honorarios seguros aseguradoras cxc sri factura electronica">
+            <div class="module-top"><span class="module-code">12</span><span class="tag">Finanzas</span></div>
+            <h3>Facturación, caja y convenios</h3>
+            <p>Facturación de consultas, procedimientos y farmacia; apertura/cierre de caja, ingresos/egresos, honorarios profesionales y cuentas por cobrar a aseguradoras.</p>
+            <ul><li>Comprobantes electrónicos y RIDE.</li><li>Notas de crédito/débito y retenciones.</li><li>Liquidación de honorarios.</li><li>Cartera de convenios y seguros.</li></ul>
+          </article>
+
+          <article class="module-card" data-category="finance" data-search="contabilidad plan cuentas asientos diario mayor balance conciliacion bancos sri impuestos">
+            <div class="module-top"><span class="module-code">13</span><span class="tag">Finanzas</span></div>
+            <h3>Contabilidad integral y SRI</h3>
+            <p>Contabilidad financiera completa con plan de cuentas, asientos automáticos/manuales, auxiliares, conciliación, cierres, estados financieros e integración tributaria con el SRI.</p>
+            <ul><li>Contabilización automática desde ventas/compras/nómina.</li><li>Importación de XML y documentos SRI.</li><li>Declaraciones, anexos y conciliación fiscal.</li><li>Reportes financieros y tributarios.</li></ul>
+            <a class="text-link" href="#contabilidad">Ver especificación ampliada →</a>
+          </article>
+
+          <article class="module-card" data-category="admin finance" data-search="nomina recursos humanos empleados personal servicios contratos iess rdep 107 vacaciones">
+            <div class="module-top"><span class="module-code">14</span><span class="tag">Administración</span></div>
+            <h3>Talento humano y nómina</h3>
+            <p>Expediente de empleados y prestadores de servicios, contratos, novedades, liquidación mensual, beneficios, provisiones, descuentos, obligaciones patronales y reportes tributarios.</p>
+            <ul><li>Empleados y profesionales por servicios.</li><li>Roles de pago y liquidaciones.</li><li>IESS, décimos, vacaciones y fondos de reserva.</li><li>RDEP y Formulario 107.</li></ul>
+            <a class="text-link" href="#nomina">Ver especificación ampliada →</a>
+          </article>
+
+          <article class="module-card" data-category="admin" data-search="contactos directorio medicos clientes proveedores sucursales consultorios usuarios">
+            <div class="module-top"><span class="module-code">15</span><span class="tag">Administración</span></div>
+            <h3>Directorio, sedes y recursos</h3>
+            <p>Directorio general de contactos, médicos, clientes, proveedores, sucursales y consultorios para centralizar personas, sedes y relaciones operativas.</p>
+          </article>
+
+          <article class="module-card" data-category="admin" data-search="lopdp privacidad consentimiento auditoria seguridad roles permisos logs">
+            <div class="module-top"><span class="module-code">16</span><span class="tag">Cumplimiento</span></div>
+            <h3>Privacidad, LOPDP y auditoría</h3>
+            <p>Centro de cumplimiento para avisos de privacidad, consentimientos, activos/documentos, registro de auditoría y control de accesos por roles y permisos.</p>
+            <ul><li>Trazabilidad de acciones sensibles.</li><li>Consentimientos del paciente.</li><li>Segregación de funciones.</li><li>Acceso por rol y permiso granular.</li></ul>
+          </article>
+
+          <article class="module-card" data-category="operations admin" data-search="activos mantenimiento biomédico equipos calibracion preventivo correctivo">
+            <div class="module-top"><span class="module-code">17</span><span class="tag">Soporte</span></div>
+            <h3>Activos y mantenimiento biomédico</h3>
+            <p>Inventario de equipos médicos y activos, hojas de vida, ubicación, mantenimientos preventivos/correctivos, calibraciones, garantías y alertas de vencimiento.</p>
+          </article>
+
+          <article class="module-card" data-category="admin finance operations clinical" data-search="dashboard bi indicadores reportes gerenciales kpi analitica">
+            <div class="module-top"><span class="module-code">18</span><span class="tag">Dirección</span></div>
+            <h3>BI y tableros gerenciales</h3>
+            <p>Indicadores de ocupación, productividad médica, agenda, facturación, cartera, inventarios, farmacia, compras, costos, nómina y cumplimiento tributario para dirección.</p>
+          </article>
+        </div>
+        <p class="empty-state" id="moduleEmpty">No hay módulos que coincidan con la búsqueda.</p>
+      </section>
+
+      <section class="section section-anchor" id="hospitalizacion">
+        <div class="feature-intro">
+          <div><span class="section-kicker">04 · Hospitalización</span><h2>Gestión completa de habitaciones, camas y pacientes internos</h2></div>
+          <p>El módulo de Hospitalización convierte la disponibilidad física de la clínica en un tablero operativo: quién está internado, dónde se encuentra, cuánto tiempo lleva hospitalizado, qué cuidados requiere y qué cargos se generan durante la estancia.</p>
+        </div>
+
+        <div class="hospital-board">
+          <div class="occupancy-card">
+            <div class="occupancy-header"><div><span>Ocupación simulada</span><strong>Planta hospitalaria</strong></div><span class="pill subtle">Tiempo real</span></div>
+            <div class="room-grid">
+              <div class="room occupied"><span>201-A</span><small>Ocupada</small></div>
+              <div class="room available"><span>201-B</span><small>Disponible</small></div>
+              <div class="room cleaning"><span>202-A</span><small>Limpieza</small></div>
+              <div class="room blocked"><span>202-B</span><small>Bloqueada</small></div>
+              <div class="room occupied"><span>203-A</span><small>Ocupada</small></div>
+              <div class="room available"><span>203-B</span><small>Disponible</small></div>
+            </div>
+            <div class="legend"><span><i class="dot occupied"></i>Ocupada</span><span><i class="dot available"></i>Disponible</span><span><i class="dot cleaning"></i>Limpieza</span><span><i class="dot blocked"></i>Bloqueada</span></div>
+          </div>
+
+          <div class="feature-list-card">
+            <div class="feature-row"><span>01</span><div><strong>Catálogo físico</strong><p>Edificios, pisos, áreas, habitaciones, camas, categorías, capacidad, tarifa y características especiales.</p></div></div>
+            <div class="feature-row"><span>02</span><div><strong>Admisión hospitalaria</strong><p>Orden de ingreso, médico responsable, diagnóstico de ingreso, prioridad, acompañante, cobertura y consentimiento.</p></div></div>
+            <div class="feature-row"><span>03</span><div><strong>Asignación y traslado</strong><p>Reserva de cama, ocupación, traslado entre habitaciones y trazabilidad completa de cada movimiento.</p></div></div>
+            <div class="feature-row"><span>04</span><div><strong>Gestión de estancia</strong><p>Días de hospitalización, evolución, signos vitales, cuidados, dieta, medicación, órdenes y observaciones.</p></div></div>
+            <div class="feature-row"><span>05</span><div><strong>Consumos y cargos</strong><p>Habitación, insumos, medicamentos, laboratorio, imágenes, procedimientos y honorarios vinculados a la cuenta del paciente.</p></div></div>
+            <div class="feature-row"><span>06</span><div><strong>Alta y cierre</strong><p>Epicrisis, indicaciones, receta de alta, liberación de cama, estado de limpieza y cierre financiero de la estancia.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-anchor" id="nomina">
+        <div class="section-heading">
+          <div><span class="section-kicker">05 · Talento humano y nómina</span><h2>De la ficha del colaborador al pago mensual y las obligaciones laborales</h2></div>
+          <p>Diseñado para administrar personal administrativo, asistencial y profesionales que prestan servicios, con separación entre relación de dependencia y contratación por honorarios.</p>
+        </div>
+
+        <div class="two-column-panels">
+          <article class="detail-panel">
+            <div class="detail-title"><span>TH</span><div><small>Maestro de personas</small><h3>Gestión de colaboradores</h3></div></div>
+            <ul class="detail-list">
+              <li><strong>Expediente:</strong> identificación, contacto, cargo, profesión, especialidad, banco, contacto de emergencia y documentos.</li>
+              <li><strong>Relación laboral:</strong> contrato, fecha de ingreso, jornada, sueldo, centro de costo, sucursal y jefe inmediato.</li>
+              <li><strong>Prestadores:</strong> profesionales por servicios, honorarios, porcentaje o tarifa, retenciones y documentos de soporte.</li>
+              <li><strong>Novedades:</strong> horas extras, atrasos, faltas, permisos, vacaciones, anticipos, bonos, comisiones y descuentos.</li>
+              <li><strong>Ciclo de vida:</strong> ingreso, cambio salarial/cargo, renovación, vacaciones, salida y liquidación.</li>
+            </ul>
+          </article>
+
+          <article class="detail-panel">
+            <div class="detail-title"><span>NM</span><div><small>Liquidación mensual</small><h3>Nómina y obligaciones</h3></div></div>
+            <ul class="detail-list">
+              <li><strong>Roles de pago:</strong> ingresos, descuentos, aportes, neto a pagar y comprobante individual.</li>
+              <li><strong>Beneficios:</strong> décimo tercero, décimo cuarto, fondos de reserva, vacaciones y provisiones.</li>
+              <li><strong>IESS:</strong> base aportable, aporte personal/patronal y reportes de conciliación para gestión patronal.</li>
+              <li><strong>Impuesto a la renta:</strong> proyección, retención mensual, acumulados y regularización anual.</li>
+              <li><strong>SRI laboral:</strong> generación de información para RDEP y Formulario 107 por trabajador.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="workflow">
+          <div><span>1</span><strong>Cargar novedades</strong><small>Asistencia, horas, bonos, descuentos</small></div>
+          <i></i><div><span>2</span><strong>Precalcular</strong><small>Validaciones y simulación</small></div>
+          <i></i><div><span>3</span><strong>Aprobar nómina</strong><small>Segregación de funciones</small></div>
+          <i></i><div><span>4</span><strong>Generar roles</strong><small>Individuales y consolidados</small></div>
+          <i></i><div><span>5</span><strong>Contabilizar</strong><small>Asiento y centro de costo</small></div>
+          <i></i><div><span>6</span><strong>Reportar</strong><small>IESS, RDEP y 107</small></div>
+        </div>
+      </section>
+
+      <section class="section section-anchor" id="contabilidad">
+        <div class="feature-intro">
+          <div><span class="section-kicker">06 · Contabilidad integral + SRI</span><h2>Un módulo financiero diseñado para cerrar el ciclo contable y tributario</h2></div>
+          <p>La capa tributaria existente se amplía hacia una contabilidad completa, evitando duplicar información entre facturación, farmacia, compras, nómina, aseguradoras y contabilidad.</p>
+        </div>
+
+        <div class="accounting-map">
+          <div class="accounting-core">
+            <small>NÚCLEO CONTABLE</small>
+            <strong>Libro mayor central</strong>
+            <p>Todo hecho económico se convierte en un movimiento trazable y conciliable.</p>
+          </div>
+          <div class="accounting-nodes">
+            <div><span>01</span><strong>Plan de cuentas</strong><small>Jerárquico y parametrizable</small></div>
+            <div><span>02</span><strong>Asientos contables</strong><small>Automáticos y manuales</small></div>
+            <div><span>03</span><strong>CxC / CxP</strong><small>Pacientes, seguros y proveedores</small></div>
+            <div><span>04</span><strong>Bancos</strong><small>Conciliación y movimientos</small></div>
+            <div><span>05</span><strong>Centros de costo</strong><small>Sede, área y servicio</small></div>
+            <div><span>06</span><strong>Activos fijos</strong><small>Altas, depreciación y bajas</small></div>
+            <div><span>07</span><strong>Cierres</strong><small>Mensual y anual</small></div>
+            <div><span>08</span><strong>Presupuesto</strong><small>Real vs presupuestado</small></div>
+          </div>
+        </div>
+
+        <div class="subsection-title"><span>Importación de documentos SRI</span><h3>Compras y documentos recibidos sin reingreso manual</h3></div>
+        <div class="import-flow">
+          <div><span class="flow-icon">XML</span><strong>Importación</strong><small>XML individual o carga masiva ZIP</small></div>
+          <span>→</span><div><span class="flow-icon">✓</span><strong>Validación</strong><small>RUC, clave, autorización, fechas e impuestos</small></div>
+          <span>→</span><div><span class="flow-icon">↔</span><strong>Conciliación</strong><small>Detecta duplicados y compara contra registros internos</small></div>
+          <span>→</span><div><span class="flow-icon">#</span><strong>Contabilización</strong><small>Proveedor, impuestos, retenciones y asiento sugerido</small></div>
+        </div>
+
+        <div class="accounting-features">
+          <article><span>Documentos electrónicos</span><p>Factura, nota de crédito, nota de débito, guía de remisión y comprobante de retención, con XML, firma, autorización, archivo y RIDE.</p></article>
+          <article><span>Parametrización tributaria</span><p>Reglas de impuestos y retenciones configurables por régimen, tipo de operación, proveedor, producto o servicio.</p></article>
+          <article><span>Conciliación tributaria</span><p>Comparación entre libros, documentos autorizados, compras, ventas, retenciones y anexos antes de declarar.</p></article>
+          <article><span>Auditoría</span><p>Origen del documento, usuario, fecha, estado SRI, autorización y eventos de emisión/anulación.</p></article>
+        </div>
+      </section>
+
+      <section class="section section-anchor" id="reportes">
+        <div class="section-heading">
+          <div><span class="section-kicker">07 · Reportes financieros y fiscales</span><h2>Información lista para dirección, contabilidad y cumplimiento</h2></div>
+          <p>El objetivo no es solo almacenar transacciones: la plataforma consolida indicadores y documentos de control para revisión interna, cierre financiero y preparación de obligaciones tributarias.</p>
+        </div>
+
+        <div class="accordion" id="reportsAccordion">
+          <article class="accordion-item open">
+            <button class="accordion-trigger"><span><b>01</b>Estados financieros y libros contables</span><i>+</i></button>
+            <div class="accordion-content"><div class="report-grid">
+              <div><strong>Balance de comprobación</strong><p>Saldos iniciales, débitos, créditos y saldos finales por cuenta.</p></div>
+              <div><strong>Libro diario</strong><p>Asientos cronológicos con origen, referencia y usuario.</p></div>
+              <div><strong>Libro mayor</strong><p>Movimientos y saldos por cuenta y periodo.</p></div>
+              <div><strong>Estado de situación financiera</strong><p>Activos, pasivos y patrimonio con comparativos.</p></div>
+              <div><strong>Estado de resultados</strong><p>Ingresos, costos, gastos y utilidad por periodo.</p></div>
+              <div><strong>Flujo de efectivo</strong><p>Entradas y salidas clasificadas para análisis de liquidez.</p></div>
+              <div><strong>Auxiliares</strong><p>Detalle por cliente, proveedor, banco, empleado y tercero.</p></div>
+              <div><strong>Centros de costo</strong><p>Rentabilidad por sede, área, especialidad o servicio.</p></div>
+            </div></div>
+          </article>
+
+          <article class="accordion-item">
+            <button class="accordion-trigger"><span><b>02</b>Cartera, compras, bancos y gestión</span><i>+</i></button>
+            <div class="accordion-content"><div class="report-grid">
+              <div><strong>Cuentas por cobrar</strong><p>Saldos y antigüedad por paciente, cliente o aseguradora.</p></div>
+              <div><strong>Cuentas por pagar</strong><p>Obligaciones a proveedores y vencimientos.</p></div>
+              <div><strong>Conciliación bancaria</strong><p>Libro banco vs movimientos conciliados y pendientes.</p></div>
+              <div><strong>Ventas</strong><p>Por fecha, sede, servicio, profesional, forma de pago e impuesto.</p></div>
+              <div><strong>Compras</strong><p>Por proveedor, documento, categoría, impuesto y centro de costo.</p></div>
+              <div><strong>Caja</strong><p>Aperturas, ingresos, egresos, cierres y diferencias.</p></div>
+              <div><strong>Inventario valorizado</strong><p>Existencias, costo, rotación y movimientos.</p></div>
+              <div><strong>Honorarios</strong><p>Producción profesional, liquidación, retenciones y pagos.</p></div>
+            </div></div>
+          </article>
+
+          <article class="accordion-item">
+            <button class="accordion-trigger"><span><b>03</b>Cumplimiento SRI — IVA, retenciones y anexos</span><i>+</i></button>
+            <div class="accordion-content"><div class="report-grid">
+              <div><strong>Formulario 104 / IVA</strong><p>Resumen de ventas, compras, bases, IVA generado, crédito tributario, retenciones y conciliación previa a declaración.</p></div>
+              <div><strong>Formulario 103</strong><p>Bases y valores retenidos en la fuente de Impuesto a la Renta, agrupados por concepto/código aplicable.</p></div>
+              <div><strong>ATS</strong><p>Compras, ventas, anulados, retenciones y validaciones para generar el Anexo Transaccional Simplificado.</p></div>
+              <div><strong>RDEP</strong><p>Consolidado anual de ingresos, deducciones y retenciones de trabajadores en relación de dependencia.</p></div>
+              <div><strong>Formulario 107</strong><p>Comprobante anual de retenciones en la fuente por ingresos bajo relación de dependencia.</p></div>
+              <div><strong>Retenciones recibidas/emitidas</strong><p>Conciliación por comprobante, tercero, porcentaje, base y valor.</p></div>
+              <div><strong>Comprobantes autorizados</strong><p>Estado SRI de factura, NC, ND, guía y retención; autorizados, pendientes, rechazados o anulados.</p></div>
+              <div><strong>Conciliación ATS vs libros</strong><p>Diferencias entre documentos importados, contabilidad y anexo antes de presentar.</p></div>
+            </div></div>
+          </article>
+
+          <article class="accordion-item">
+            <button class="accordion-trigger"><span><b>04</b>Cumplimiento tributario anual y control</span><i>+</i></button>
+            <div class="accordion-content"><div class="report-grid">
+              <div><strong>Impuesto a la Renta</strong><p>Información base para declaración anual según el tipo de contribuyente y obligaciones registradas en RUC.</p></div>
+              <div><strong>Conciliación tributaria</strong><p>Puente entre resultado contable y base imponible con partidas conciliatorias.</p></div>
+              <div><strong>Gastos no deducibles</strong><p>Clasificación y seguimiento de partidas que requieren tratamiento fiscal específico.</p></div>
+              <div><strong>Calendario tributario</strong><p>Obligaciones, periodo, vencimiento, responsable, estado y evidencia de presentación/pago.</p></div>
+              <div><strong>Certificados y firma</strong><p>Vigencia del certificado electrónico y alertas preventivas de expiración.</p></div>
+              <div><strong>Auditoría documental</strong><p>Documento origen, XML, RIDE, clave de acceso, autorización, envío y eventos asociados.</p></div>
+            </div><p class="legal-note">Los formularios, anexos y vencimientos aplicables dependen del RUC, régimen, condición del contribuyente y normativa vigente. El módulo se plantea parametrizable para mantener catálogos, porcentajes y reglas actualizados.</p></div>
+          </article>
+
+          <article class="accordion-item">
+            <button class="accordion-trigger"><span><b>05</b>Indicadores clínicos y hospitalarios</span><i>+</i></button>
+            <div class="accordion-content"><div class="report-grid">
+              <div><strong>Ocupación hospitalaria</strong><p>Camas disponibles, ocupadas, bloqueadas, giro cama y estancia media.</p></div>
+              <div><strong>Productividad médica</strong><p>Consultas, procedimientos, horas utilizadas, facturación y ticket promedio.</p></div>
+              <div><strong>Agenda</strong><p>Asistencia, cancelación, no-show, reprogramación y utilización por profesional.</p></div>
+              <div><strong>Farmacia</strong><p>Ventas, margen, consumo, caducidad, controlados y rotación de medicamentos.</p></div>
+              <div><strong>Laboratorio</strong><p>Órdenes, tiempos de respuesta, resultados pendientes y volumen por examen.</p></div>
+              <div><strong>Convenios</strong><p>Cartera por aseguradora, días de cobro, glosas y recuperación.</p></div>
+            </div></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-anchor" id="tecnologias">
+        <div class="section-heading">
+          <div><span class="section-kicker">08 · Tecnologías</span><h2>Stack tecnológico identificado en el proyecto</h2></div>
+          <p>La solución se apoya en tecnologías ampliamente usadas en aplicaciones empresariales PHP, con herramientas específicas para seguridad, PDFs, Excel, firma electrónica, pruebas y despliegue.</p>
+        </div>
+
+        <div class="tech-table-wrap">
+          <table class="tech-table">
+            <thead><tr><th>Capa</th><th>Tecnología</th><th>Uso en la solución</th></tr></thead>
+            <tbody>
+              <tr><td>Backend</td><td>PHP 8.1+ / Laravel 10</td><td>Lógica de negocio, MVC, Eloquent ORM, validaciones, jobs, mail, APIs y servicios.</td></tr>
+              <tr><td>Base de datos</td><td>MySQL 8.0</td><td>Información clínica, administrativa, inventarios, financiera y fiscal.</td></tr>
+              <tr><td>Frontend</td><td>Blade + AdminLTE 3 + Bootstrap 4.6</td><td>Interfaz administrativa renderizada en servidor.</td></tr>
+              <tr><td>Interactividad</td><td>JavaScript, jQuery, Alpine.js</td><td>Eventos de interfaz, formularios, componentes y comportamientos dinámicos.</td></tr>
+              <tr><td>UI / datos</td><td>DataTables, Flatpickr, SweetAlert2</td><td>Tablas, fechas/horarios y diálogos de interacción.</td></tr>
+              <tr><td>Estilos/build</td><td>Tailwind CSS, PostCSS, Vite</td><td>Utilidades de estilo y compilación de activos.</td></tr>
+              <tr><td>Seguridad</td><td>Laravel Sanctum + Spatie Permission</td><td>Autenticación/API y control de roles/permisos.</td></tr>
+              <tr><td>Documentos</td><td>Dompdf + Maatwebsite Excel</td><td>Generación de PDFs y exportación/importación de Excel.</td></tr>
+              <tr><td>Integraciones</td><td>Guzzle HTTP</td><td>Consumo de APIs externas y servicios HTTP.</td></tr>
+              <tr><td>SRI / XML</td><td>XMLSecLibs + SOAP</td><td>Firma XML, recepción/autorización de comprobantes y validación electrónica.</td></tr>
+              <tr><td>Procesos asíncronos</td><td>Laravel Queue (database)</td><td>Emisión SRI, notificaciones y tareas en segundo plano.</td></tr>
+              <tr><td>Despliegue local</td><td>Docker / Laravel Sail</td><td>Entorno reproducible con aplicación y MySQL.</td></tr>
+              <tr><td>Pruebas</td><td>PHPUnit + Playwright</td><td>Pruebas unitarias, de seguridad, dominio y E2E.</td></tr>
+              <tr><td>Canales</td><td>SMTP + WhatsApp Cloud/API</td><td>Confirmaciones y recordatorios de citas.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section section-anchor" id="infraestructura">
+        <div class="section-heading">
+          <div><span class="section-kicker">09 · Infraestructura</span><h2>Recursos recomendados para servidor físico y nube</h2></div>
+          <p>El dimensionamiento final depende de usuarios concurrentes, volumen de archivos clínicos, imágenes, emisión electrónica y políticas de respaldo. Los perfiles siguientes son una guía de producción y deben confirmarse con pruebas de carga.</p>
+        </div>
+
+        <div class="infra-switch" role="tablist">
+          <button class="infra-tab active" data-tab="physical">Servidor físico</button>
+          <button class="infra-tab" data-tab="cloud">Servidor en la nube</button>
+        </div>
+
+        <div class="infra-panel active" id="physical">
+          <div class="infra-cards">
+            <article><span class="infra-label">Mínimo operativo</span><h3>Clínica pequeña</h3><strong>4 núcleos · 16 GB RAM</strong><ul><li>SSD/NVMe 500 GB.</li><li>MySQL y aplicación en el mismo host.</li><li>Hasta ~10 usuarios concurrentes como referencia.</li><li>Backup externo diario obligatorio.</li></ul></article>
+            <article class="recommended"><span class="infra-label">Recomendado</span><h3>Producción estándar</h3><strong>8 núcleos · 32 GB RAM</strong><ul><li>2 × 1 TB NVMe en RAID 1.</li><li>NIC Gigabit/2.5 GbE.</li><li>UPS online 1500–2000 VA.</li><li>NAS o repositorio de backup independiente ≥ 2 TB.</li><li>Separación de respaldos y archivos clínicos.</li></ul></article>
+            <article><span class="infra-label">Alta demanda</span><h3>Clínica multisede</h3><strong>12–16 núcleos · 64 GB RAM</strong><ul><li>RAID 10 NVMe empresarial.</li><li>Base de datos en VM/host separado.</li><li>Almacenamiento dedicado para adjuntos.</li><li>Replica/segundo servidor para continuidad.</li></ul></article>
+          </div>
+          <div class="infra-detail"><strong>Software recomendado</strong><span>Ubuntu Server 24.04 LTS o Debian estable</span><span>Nginx + PHP-FPM 8.3</span><span>MySQL 8</span><span>Supervisor/systemd para colas</span><span>Docker opcional</span><span>Redis recomendado para cache/sesiones a escala</span></div>
+        </div>
+
+        <div class="infra-panel" id="cloud">
+          <div class="infra-cards">
+            <article><span class="infra-label">Mínimo operativo</span><h3>Instancia única</h3><strong>4 vCPU · 8 GB RAM</strong><ul><li>SSD 120–160 GB.</li><li>Aplicación + DB en la misma instancia.</li><li>Backups diarios y snapshots.</li><li>Entornos de baja concurrencia.</li></ul></article>
+            <article class="recommended"><span class="infra-label">Recomendado</span><h3>Producción estándar</h3><strong>8 vCPU · 16 GB RAM</strong><ul><li>SSD 200–300 GB para aplicación/datos activos.</li><li>Base de datos administrada o instancia separada.</li><li>Object Storage para adjuntos y respaldos.</li><li>Worker de colas persistente.</li><li>CDN/WAF opcional según exposición.</li></ul></article>
+            <article><span class="infra-label">Alta disponibilidad</span><h3>Escalable</h3><strong>2+ nodos app · DB administrada</strong><ul><li>Balanceador de carga.</li><li>DB 4–8 vCPU / 16–32 GB RAM con HA.</li><li>Redis administrado.</li><li>Object Storage versionado.</li><li>Backups multi-zona y monitoreo central.</li></ul></article>
+          </div>
+          <div class="infra-detail"><strong>Servicios compatibles</strong><span>AWS / Azure / Google Cloud</span><span>VPS Linux empresarial</span><span>Base de datos administrada</span><span>Object Storage S3-compatible</span><span>TLS/HTTPS</span><span>Monitoreo de uptime, logs y recursos</span></div>
+        </div>
+
+        <div class="storage-callout"><div><span>Archivos clínicos</span><strong>Separar almacenamiento de adjuntos del disco del sistema.</strong></div><p>Las imágenes, PDFs, resultados y XML pueden crecer mucho más rápido que la base de datos. En nube se recomienda Object Storage; en instalación física, NAS redundante con política de backup 3-2-1.</p></div>
+      </section>
+
+      <section class="section section-anchor" id="seguridad">
+        <div class="section-heading">
+          <div><span class="section-kicker">10 · Seguridad, privacidad y continuidad</span><h2>Controles para proteger información clínica y financiera</h2></div>
+          <p>La plataforma ya incorpora roles/permisos, auditoría, consentimientos y opciones de sesión segura; el despliegue productivo debe completar estos controles con infraestructura, respaldos y monitoreo.</p>
+        </div>
+
+        <div class="security-grid">
+          <article><span>01</span><h3>Control de acceso</h3><p>Usuarios, roles, permisos granulares y separación de capacidades administrativas.</p></article>
+          <article><span>02</span><h3>Auditoría</h3><p>Registro de acciones sensibles, cambios y eventos asociados a procesos clínicos/fiscales.</p></article>
+          <article><span>03</span><h3>Privacidad LOPDP</h3><p>Avisos de privacidad, consentimiento del paciente, documentos de cumplimiento y trazabilidad.</p></article>
+          <article><span>04</span><h3>Protección de sesión</h3><p>Cookies seguras, HTTP-only, SameSite y cifrado de sesión configurables.</p></article>
+          <article><span>05</span><h3>Backups</h3><p>Respaldos diarios, copias fuera del servidor, pruebas de restauración y retención por política.</p></article>
+          <article><span>06</span><h3>Continuidad</h3><p>UPS en on-premise; snapshots, zonas redundantes y monitoreo en nube.</p></article>
+          <article><span>07</span><h3>HTTPS</h3><p>TLS obligatorio, renovación automática de certificados y exposición mínima de servicios.</p></article>
+          <article><span>08</span><h3>Observabilidad</h3><p>Logs centralizados, alertas de errores, uso de recursos, estado de colas y servicios SRI.</p></article>
+        </div>
+
+        <div class="closing-card">
+          <div><span>CONSULTORIOS ERP</span><h2>Una plataforma para operar la clínica como una sola organización.</h2><p>La información clínica, hospitalaria, logística, financiera, laboral y tributaria comparte una única fuente de datos y un mismo modelo de control, reduciendo duplicidad, reprocesos y pérdida de trazabilidad.</p></div>
+          <div class="closing-points"><span>Paciente 360°</span><span>Operación multisede</span><span>Hospitalización</span><span>Nómina</span><span>Contabilidad</span><span>SRI</span><span>Inventarios</span><span>Auditoría</span></div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div><strong>Consultorios ERP</strong><span>Ficha técnica integral · Ecuador</span></div>
+        <p>Documento funcional/técnico elaborado a partir del proyecto suministrado y de la ampliación de alcance solicitada. Recomendaciones de infraestructura sujetas a pruebas de carga y volumen real de operación.</p>
+      </footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
